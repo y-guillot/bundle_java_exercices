@@ -7,6 +7,8 @@ public class DicoUtils implements Runnable {
 	
 	//Best practices : 1 logger by class.
 	private static final Logger LOGGER = LogManager.getLogger(DicoUtils.class);
+	public static boolean RUNNING = true;
+	public static String DICO_PATH = "./resources/dictionnaire.txt";
 
 	public static void main(String[] args) {
  
@@ -17,16 +19,30 @@ public class DicoUtils implements Runnable {
 	@Override
 	public void run() {
 		
-		
 		LOGGER.info("Dico Utils starts");
 		LOGGER.error("oops i did it again");
-		// Construction et Affichage du menu.
-		// Récupération du dictionnaire
-		// Récupérer le choix utilisateur
-		// Tant que ul'utilisateur ne cchoisi pas de quiter :
-		// 		Si erreur, recommencer
-		//		Sinon accéder à la fonctionnalité demandée puis recommencer
 		
+		final Menu menu = MenuFactory.getInstance();
+		
+		while (DicoUtils.RUNNING) {
+			
+			menu.display();
+			boolean inputValid = false;
+			
+			while(!inputValid) {
+				final short id = menu.readChoice();
+				if (id >= 0) {
+					final MenuItem choosenItem = new MenuItem(id);
+					if (menu.getItems().contains(choosenItem)) {
+						inputValid = true;
+						menu.executeIemById(id);
+					} else {
+						LOGGER.error("La valeur saisie "+ id + " n'ets pas valide");
+					}
+				} else {
+					LOGGER.error("La valeur saisie "+ id + " n'est pas incluse dans la plage authorisée");
+				}
+			}
+		}
 	}
-
 }
