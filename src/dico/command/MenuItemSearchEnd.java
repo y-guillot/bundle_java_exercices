@@ -2,9 +2,9 @@ package dico.command;
 
 import dico.Menu;
 
-public class MenuItemSearchStop extends MenuItemSearch {
+public class MenuItemSearchEnd extends MenuItemSearch {
 	
-	public MenuItemSearchStop(Menu menu, short id) {
+	public MenuItemSearchEnd(Menu menu, Integer id) {
 		
 		super(menu, "Rechercher tous les mots qui finissent par une valeur", id);
 	} 

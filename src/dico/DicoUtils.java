@@ -30,7 +30,7 @@ public class DicoUtils implements Runnable {
 			boolean inputValid = false;
 			
 			while(!inputValid) {
-				final short id = menu.readChoice();
+				final Integer id = Integer.valueOf(menu.readChoice());
 				if (id >= 0) {
 					final MenuItem choosenItem = new MenuItem(id);
 					if (menu.getItems().contains(choosenItem)) {

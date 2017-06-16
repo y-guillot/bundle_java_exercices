@@ -8,18 +8,18 @@ public class MenuItem implements Runnable {
 	// Menu menu
 	private final String name;
 	protected final Menu menu;
-	private final short id;
+	private final Integer id;
 	
 	protected static final Logger LOGGER = LogManager.getLogger(MenuItem.class);
 	
-	public MenuItem(final short id) {
+	public MenuItem(final Integer id) {
 		
 		this.menu = null;
 		this.name = null;
 		this.id = id;
 	}
 	
-	public MenuItem(final Menu menu, final String name, final short id) {
+	public MenuItem(final Menu menu, final String name, final Integer id) {
 		
 		this.menu = menu;
 		this.name = name;
@@ -30,7 +30,7 @@ public class MenuItem implements Runnable {
 		return name;
 	}
 
-	public short getId() {
+	public Integer getId() {
 		return id;
 	}
 

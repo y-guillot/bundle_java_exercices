@@ -10,12 +10,12 @@ import dico.MenuItem;
 
 public class MenuItemSearch extends MenuItem {
 
-	public MenuItemSearch(Menu menu, String name, short id) {
+	public MenuItemSearch(Menu menu, String name, Integer id) {
 		super(menu, name, id);
 		
 	}
 	
-	public MenuItemSearch(Menu menu, short id) {
+	public MenuItemSearch(Menu menu, Integer id) {
 		super(menu, "Rechercher un mot contenant une chaine", id);
 	}	
 

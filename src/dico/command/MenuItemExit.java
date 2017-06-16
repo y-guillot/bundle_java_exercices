@@ -6,7 +6,7 @@ import dico.MenuItem;
 
 public class MenuItemExit extends MenuItem {
 	
-	public MenuItemExit(Menu menu, short id) {
+	public MenuItemExit(Menu menu, Integer id) {
 		
 		super(menu, "Quitter l'application", id);
 	}

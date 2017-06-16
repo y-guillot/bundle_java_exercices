@@ -55,7 +55,7 @@ public class Menu {
 	 * 
 	 * @param id l'identifiant correspondant au {@link MenuItem} à appeler
 	 */
-	public void executeIemById(final short id) {
+	public void executeIemById(final Integer id) {
 		this.items.get(this.items.indexOf(new MenuItem(id))).run();
 	}
 }

@@ -4,7 +4,7 @@ import dico.Menu;
 
 public class MenuItemSearchStrict extends MenuItemSearch {
 	
-	public MenuItemSearchStrict(Menu menu, short id) {
+	public MenuItemSearchStrict(Menu menu, Integer id) {
 		
 		super(menu, "Rechercher la présence d'un mot exacte", id);
 	}
